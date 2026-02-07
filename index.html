@@ -12,45 +12,76 @@
       justify-content: center;
       align-items: center;
       margin: 0;
+      overflow: hidden;
     }
+
     .card {
       background: white;
       padding: 30px;
       border-radius: 15px;
       text-align: center;
       box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      position: relative;
     }
+
     h1 {
       color: #e63946;
     }
+
     button {
-      padding: 10px 20px;
+      padding: 12px 24px;
       margin: 10px;
       font-size: 16px;
       border: none;
       border-radius: 8px;
       cursor: pointer;
+      position: relative;
     }
+
     .yes {
       background-color: #e63946;
       color: white;
     }
+
     .no {
       background-color: #adb5bd;
       color: white;
+      position: absolute;
     }
   </style>
 </head>
 <body>
   <div class="card">
     <h1>💘 Veux-tu être ma Valentine ? 💘</h1>
-    <p>Promis, il y aura des sourires, des rires et peut-être du chocolat 🍫</p>
-    <button class="yes" onclick="alert('Yaaay 💖 Tu viens de rendre ma journée incroyable !')">
+    <p>Réfléchis bien… une réponse est clairement meilleure que l’autre 😌</p>
+
+    <button class="yes" onclick="goToYesPage()">
       Oui 🥰
     </button>
-    <button class="no" onclick="alert('Erreur 404 : le non est introuvable 😌')">
+
+    <button class="no" id="noBtn">
       Non 🙃
     </button>
   </div>
+
+  <script>
+    const noBtn = document.getElementById("noBtn");
+
+    noBtn.addEventListener("mouseover", () => {
+      const card = document.querySelector(".card");
+      const maxX = card.offsetWidth - noBtn.offsetWidth;
+      const maxY = card.offsetHeight - noBtn.offsetHeight;
+
+      const randomX = Math.random() * maxX;
+      const randomY = Math.random() * maxY;
+
+      noBtn.style.left = randomX + "px";
+      noBtn.style.top = randomY + "px";
+    });
+
+    function goToYesPage() {
+      window.location.href = "yes.html";
+    }
+  </script>
 </body>
 </html>
