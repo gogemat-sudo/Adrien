@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Question très importante 💖</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+    }
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+    h1 {
+      color: #e63946;
+    }
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .yes {
+      background-color: #e63946;
+      color: white;
+    }
+    .no {
+      background-color: #adb5bd;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>💘 Veux-tu être ma Valentine ? 💘</h1>
+    <p>Promis, il y aura des sourires, des rires et peut-être du chocolat 🍫</p>
+    <button class="yes" onclick="alert('Yaaay 💖 Tu viens de rendre ma journée incroyable !')">
+      Oui 🥰
+    </button>
+    <button class="no" onclick="alert('Erreur 404 : le non est introuvable 😌')">
+      Non 🙃
+    </button>
+  </div>
+</body>
+</html>
